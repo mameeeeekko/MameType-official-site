@@ -13,7 +13,7 @@ GitHub Pages用のMameType総合サイトです。
 ## URL
 
 ゲームページは現在 `https://mameeeeekko.github.io/MameType/` を設定しています。
-もし実際の公開URLが異なる場合は `index.html` 内のリンクを置き換えてください。
+
 
 ## 主な導線
 
