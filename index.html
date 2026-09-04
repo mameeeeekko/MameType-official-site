@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#08111f">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icon-16.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
   <meta name="description" content="MameType — 毎日のタイピングが、成長になる。記録・RPG・オンラインランキング・オフラインプレイに対応したブラウザタイピングゲーム。">
   <title>MameType | 毎日のタイピングが、成長になる。</title>
   <link rel="stylesheet" href="style.css">
@@ -56,7 +61,7 @@
               <span></span><span></span><span></span>
               <small>MameType</small>
             </div>
-            <img src="assets/mametype-title.png" alt="MameType クエストモードのタイトル画面">
+            <img src="assets/mametype-attack.png" alt="MameType クエストモードのタイトル画面">
           </div>
           <div class="visual-caption">
             <span>01</span>
@@ -139,19 +144,27 @@
           <p>間違えた問題をやり直して、苦手をそのままにしません。</p>
         </article>
 
+        <article class="feature-card dark reveal delay-1">
+            <div class="feature-index">05</div>
+            <div>
+              <p class="feature-label">REALTIME HUD</p>
+              <h3>プレイ中も、<br>リアルタイムで見える。</h3>
+              <p>平均入力速度と平均正確性を、プレイ中の画面（HUD）にリアルタイム表示。<br>今の自分のタイピング力を確認しながらプレイできます。</p>
+            </div>
+        </article>
+
+        <article class="feature-card image-card reveal">
+          <img src="assets/mametype-hud.png" alt="MameTypeのHUD画面">
+        </article>
+
         <article class="feature-card dark wide reveal">
           <div class="wide-copy">
-            <div class="feature-index">05</div>
+            <div class="feature-index">06</div>
             <div>
               <p class="feature-label">BROWSER / OFFLINE</p>
               <h3>ブラウザから、気軽に。</h3>
               <p>インストール不要。ブラウザですぐにプレイできます。ゲームをブラウザに保存すれば、オフラインでも楽しめます。</p>
             </div>
-          </div>
-          <div class="status-lines">
-            <span>ONLINE <b>READY</b></span>
-            <span>OFFLINE <b>READY</b></span>
-            <span>UPDATE <b>ONLINE</b></span>
           </div>
         </article>
       </div>
@@ -166,14 +179,14 @@
 
   <div class="section-heading reveal">
     <p class="eyebrow">HOW TO PLAY</p>
-    <h2>遊び方を、<br>シンプルに。</h2>
+    <h2>遊び方は、<br>ひとつじゃない。</h2>
   </div>
 
   <div class="howto-intro reveal">
     <p class="lead">
       MameTypeは、タイピングを中心にさまざまなゲームモードや
       RPG要素を楽しめるブラウザゲームです。
-      ここでは基本的な操作から、QUEST MODEの遊び方まで紹介します。
+      ここでは基本的なモードから、QUEST MODEの遊び方まで紹介します。
     </p>
   </div>
 
@@ -193,12 +206,8 @@
     </div>
 
     <div class="howto-content">
-
-      <div class="howto-image placeholder-image">
-        <div class="placeholder-screen">
-          <span>IMAGE</span>
-          <small>TYPING SCREEN</small>
-        </div>
+      <div class="howto-image">
+        <img src="assets/mametype-standard2.png" alt="MameTypeの戦闘画面">
       </div>
 
       <div class="howto-text">
@@ -337,8 +346,8 @@
             <div>
               <strong>ONLINE RANKING</strong>
               <p>
-                オンラインランキングから、
-                他のプレイヤーの記録と競うことができます。
+                オンラインランキングでは、
+                他のプレイヤーの記録や自分の順位を確認できます。
               </p>
             </div>
           </div>
@@ -349,6 +358,7 @@
               <strong>SETTINGS</strong>
               <p>
                 音量など、ゲームの各種設定を変更できます。
+                データのバックアップやオンライン名の設定もここから行えます。
               </p>
             </div>
           </div>
@@ -356,12 +366,9 @@
         </div>
       </div>
 
-      <div class="howto-image placeholder-image">
-        <div class="placeholder-screen">
-          <span>IMAGE</span>
-          <small>TITLE MENU</small>
-        </div>
-      </div>
+          <div class="howto-image">
+            <img src="assets/mametype-title2.png" alt="MameTypeのタイトル画面">
+          </div>
 
     </div>
   </div>
@@ -385,53 +392,209 @@
 
       <article class="mode-card">
         <span class="mode-no">01</span>
+        <img class="mode-bg" src="assets/mametype-standard.png" alt="" aria-hidden="true">
         <p class="feature-label">STANDARD</p>
         <h4>スタンダード</h4>
         <p>
           MameTypeの基本となるタイピングモード。
           表示された文章を入力して、速度と正確さを競います。
+          問題数が決まっています。
         </p>
+        <button class="mode-more-btn" type="button" aria-haspopup="dialog">
+          <span class="mode-more-label">詳細を見る</span>
+          <span class="mode-more-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="mode-more" id="mode-detail-01">
+          <p>
+            1回のプレイごとに速度と正確率が記録され、自分のタイピング傾向を確認できます。
+            まずは自分の基準となるタイピング力を知りたい方に最適なモードです。
+          </p>
+          <figure class="mode-more-figure">
+            <img class="mode-more-shot" src="assets/mametype-standard.png" alt="スタンダードモードのプレイ画面">
+            <figcaption class="mode-more-caption">PLAY SCREEN</figcaption>
+          </figure>
+          <div class="mode-more-points">
+            <div class="mode-more-point">
+              <span>HOW TO PLAY</span>
+              <p>表示された文章をそのまま入力していきます。<br>一つの文章を打ち終わったら次の文章が出てきます。<br>指定された問題数を打ち終わったら終了です。</p>
+            </div>
+            <div class="mode-more-point">
+              <span>DAILY</span>
+              <p>全15問で、英語問題は出題されません。</p>
+            </div>
+          </div>
+        </div>
       </article>
 
       <article class="mode-card">
         <span class="mode-no">02</span>
+        <img class="mode-bg" src="assets/mametype-time.png" alt="" aria-hidden="true">
         <p class="feature-label">TIME ATTACK</p>
         <h4>タイムアタック</h4>
         <p>
           制限時間の中で、できるだけ多くの文字を
           正確に入力することを目指します。
         </p>
+        <button class="mode-more-btn" type="button" aria-haspopup="dialog">
+          <span class="mode-more-label">詳細を見る</span>
+          <span class="mode-more-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="mode-more" id="mode-detail-02">
+          <p>
+            画面に表示される制限時間を使い切り、どれだけ多くの文字を正確に入力できるかを競います。
+            スピードはもちろん、ミスの少なさも結果に響きます。短時間で手軽に挑戦できるモードです。
+          </p>
+          <figure class="mode-more-figure">
+            <img class="mode-more-shot" src="assets/mametype-time.png" alt="タイムアタックモードのプレイ画面">
+            <figcaption class="mode-more-caption">PLAY SCREEN</figcaption>
+          </figure>
+          <div class="mode-more-points">
+            <div class="mode-more-point">
+              <span>HOW TO PLAY</span>
+              <p>画面に表示される制限時間内に、どれだけ多くの文字を正確に入力できるかを競います。</p>
+            </div>
+            <div class="mode-more-point">
+              <span>DAILY</span>
+              <p>制限時間120秒で、英語問題は出題されません。</p>
+            </div>
+          </div>
+        </div>
       </article>
 
       <article class="mode-card">
         <span class="mode-no">03</span>
+        <img class="mode-bg" src="assets/mametype-long.png" alt="" aria-hidden="true">
         <p class="feature-label">LONG TEXT</p>
         <h4>長文</h4>
         <p>
           長い文章を入力するモード。
           文章を読む力と、安定したタイピング力を鍛えられます。
         </p>
+        <button class="mode-more-btn" type="button" aria-haspopup="dialog">
+          <span class="mode-more-label">詳細を見る</span>
+          <span class="mode-more-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="mode-more" id="mode-detail-03">
+          <p>
+            画面に入りきらないほど長い文章を、最後まで集中して入力します。
+            ペースを乱さない集中力と、正確さを維持する持続力が身につきます。
+          </p>
+          <figure class="mode-more-figure">
+            <img class="mode-more-shot" src="assets/mametype-long.png" alt="長文モードのプレイ画面">
+            <figcaption class="mode-more-caption">PLAY SCREEN</figcaption>
+          </figure>
+          <div class="mode-more-points">
+            <div class="mode-more-point">
+              <span>HOW TO PLAY</span>
+              <p>画面に入りきらないほど長い文章を、読み進めながら最後まで集中して入力していきます。</p>
+            </div>
+            <div class="mode-more-point">
+              <span>DAILY</span>
+              <p>約400字の長文が、さまざまなジャンルから出題されます。<br>文学、情報セキュリティ、プログラミング、キーボード関連、など多種多様です。</p>
+            </div>
+          </div>
+        </div>
       </article>
 
       <article class="mode-card">
         <span class="mode-no">04</span>
+        <img class="mode-bg" src="assets/mametype-battle.png" alt="" aria-hidden="true">
         <p class="feature-label">ENEMY MODE</p>
         <h4>エネミーモード</h4>
         <p>
           出現する敵をタイピングで倒していくバトルモード。
-          コンボをつなぎながら敵を撃破します。
+          ダメージを受ける前に敵を撃破します。
         </p>
+        <button class="mode-more-btn" type="button" aria-haspopup="dialog">
+          <span class="mode-more-label">詳細を見る</span>
+          <span class="mode-more-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="mode-more" id="mode-detail-04">
+          <p>
+            出現した敵に表示されている文字を入力して攻撃します。
+            タイピングの速度と正確さが、そのまま戦闘力になります。
+          </p>
+          <figure class="mode-more-figure">
+            <img class="mode-more-shot" src="assets/mametype-battle.png" alt="エネミーモードのプレイ画面">
+            <figcaption class="mode-more-caption">PLAY SCREEN</figcaption>
+          </figure>
+          <div class="mode-more-points">
+            <div class="mode-more-point">
+              <span>HOW TO PLAY</span>
+              <p>出現した敵に表示されている文字を入力して攻撃し、敵を撃破していきます。<br>指定された敵の数倒す、指定時間まで生き残る、などの条件を満たせば終了です。</p>
+            </div>
+            <div class="mode-more-point">
+              <span>LOCK-ON SYSTEM</span>
+              <p>敵の最初の文字を入力すると、その敵に自動でロックオンされます。<br>最初の文字が重複している場合は、次に入力した文字で判断します。<br>もちろん、途中で別の敵に切り替えることもできるし、一番近くの敵に自動でロックオンすることもできます。</p>
+            </div>
+            <div class="mode-more-point">
+              <span>CHAIN SYSTEM</span>
+              <p>チェインバーが無くなる前に敵を倒すと、チェインがつながり、より高いスコアを獲得できます。<br>ただし、ミスタイプでチェインバーが減少します。<br>また、最大チェイン数が最後のスコアに影響します。</p>
+            </div>
+            <div class="mode-more-point">
+              <span>SKILL / ITEM</span>
+              <p>色々な効果を持ったスキルやアイテムを使って、戦闘を有利に進めることができます。<br>ただし、DAILY MODEではスキルやアイテムは使用できません。</p>
+            </div>
+            <div class="mode-more-point">
+              <span>COMBO SYSTEM</span>
+              <p>ミスタイプをしないで文字を入力すると、コンボがつながり、スキルのクールダウンタイムが短縮されます。</p>
+            </div>
+            <div class="mode-more-point">
+              <span>SCORE</span>
+              <p>最後の結果に補正が入り、最終スコアとなります。<br>最大チェイン数、正確性、難易度、打鍵速度が補正に影響します。<br>さらにノーミス、ノーダメージでクリアするとスコアにボーナス補正がつきます。</p>
+            </div>
+
+          </div>
+        </div>
       </article>
 
       <article class="mode-card mode-card-wide">
         <span class="mode-no">05</span>
+        <img class="mode-bg" src="assets/mametype-battle2.png" alt="" aria-hidden="true">
         <p class="feature-label">DEFENSE MODE</p>
         <h4>防衛モード</h4>
         <p>
           迫りくる侵食からシステムを守る防衛戦。
-          制限時間内に指定された文字数を入力し、
+          制限時間内に指定された文字数以上を入力し、
           できるだけ高い評価を目指します。
         </p>
+        <button class="mode-more-btn" type="button" aria-haspopup="dialog">
+          <span class="mode-more-label">詳細を見る</span>
+          <span class="mode-more-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="mode-more" id="mode-detail-05">
+          <p>
+            迫りくる侵食からシステムのコアを守る防衛戦です。
+            制限時間内に指定文字数の入力を達成し、侵食の進行を食い止めて
+            高い評価を目指します。
+          </p>
+          <figure class="mode-more-figure">
+            <img class="mode-more-shot" src="assets/mametype-battle2.png" alt="防衛モードのプレイ画面">
+            <figcaption class="mode-more-caption">PLAY SCREEN</figcaption>
+          </figure>
+          <div class="mode-more-points">
+            <div class="mode-more-point">
+              <span>HOW TO PLAY</span>
+              <p>制限時間内に、指定された文字数を入力することを目指します。
+              <br>文字列の入力が完了すると、自動的に次の文字列へ進みます。
+              <br>コンボをつなげると制限時間が増え、ミスタイプすると制限時間が減少。
+              <br>正確さとスピード、両方がクリアのカギになります。
+              </p>
+            </div>
+            <div class="mode-more-point">
+              <span>COMBO SYSTEM</span>
+              <p>ミスタイプせずに入力を続けると、コンボがつながりコンボバーが上昇します。
+                <br>一定量までチャージすると、制限時間やスコアにボーナスが発生。
+                <br>さらにコンボバーを最大まで貯めると、OVERDRIVEが発動します。
+                <br>OVERDRIVE中は、一定文字数を入力するたびに制限時間ボーナスを獲得できます。
+              </p>
+            </div>
+            <div class="mode-more-point">
+              <span>DAILY</span>
+              <p>出題される文字数は3-12文字程度。ジャンルは標準タイプのみ。<br>クリア条件は120秒以内に300文字以上。</p>
+            </div>
+          </div>
+        </div>
       </article>
 
     </div>
@@ -463,13 +626,9 @@
       </div>
 
       <div class="howto-content">
-
-        <div class="howto-image placeholder-image">
-          <div class="placeholder-screen">
-            <span>IMAGE</span>
-            <small>QUEST MAP</small>
-          </div>
-        </div>
+        <div class="howto-image">
+          <img src="assets/mametype-map.png" alt="MameTypeのmap画面">
+      　</div>
 
         <div class="howto-text">
 
@@ -513,9 +672,10 @@
             <div class="quest-point">
               <span>NODE</span>
               <div>
-                <strong>何度でも挑戦</strong>
-                <p>
-                  クリアしたノードにも再挑戦できます。
+                <strong>挑戦するほど、強くなる</strong>
+                <p> クリアしたノードにも何度でも挑戦できます。<br> 
+                    レベルを上げながら、クリア評価に応じた星を集め、<br> 
+                    スキルをさらに強化していきましょう。
                 </p>
               </div>
             </div>
@@ -545,8 +705,8 @@
     <div class="howto-text">
 
       <p>
-        QUEST MODEでは、マップ上のノードをクリアすることで、
-        スキルツリーの新しいノードが解放されていきます。
+        QUEST MODEでは、スキルツリー上のノードをクリアすることで、
+        新しいスキルが解放されていきます。
         ノードを進めながらスキルを獲得し、
         自分の戦い方を少しずつ広げていきましょう。
       </p>
@@ -557,8 +717,10 @@
           <span>UNLOCK</span>
           <strong>ノードをクリアして解放</strong>
           <p>
-            QUEST MODEのノードをクリアすると、
-            スキルツリー上の新しいノードやスキルが解放されます。
+            SKILL TREEのノードをクリアして、
+            その先に待つ新たなノードやスキルを解放しましょう。
+            ノードごとに設定されたさまざまな条件を達成し、
+            スキルツリーを攻略していくことで、さらなる力を手に入れられます。
           </p>
         </div>
 
@@ -572,7 +734,7 @@
         </div>
 
         <div>
-          <span>PASSIVE / SPECIAL</span>
+          <span>PASSIVE / AUTO SKILL</span>
           <strong>さまざまな成長要素</strong>
           <p>
             スキルツリーには、アクティブスキルだけでなく、
@@ -584,13 +746,10 @@
 
     </div>
 
-    <div class="howto-image placeholder-image">
-      <div class="placeholder-screen">
-        <span>IMAGE</span>
-        <small>SKILL TREE</small>
-      </div>
+    
+    <div class="howto-image">
+      <img src="assets/mametype-skilltree.png" alt="MameTypeのskilltree画面">
     </div>
-
 
   </div>
 
@@ -608,14 +767,9 @@
   </div>
 
   <div class="star-growth">
-
-    <div class="star-growth-image placeholder-image">
-      <div class="placeholder-screen">
-        <span>IMAGE</span>
-        <small>STAR UPGRADE</small>
-      </div>
+    <div class="howto-image">
+      <img src="assets/mametype-star.png" alt="MameTypeのstarupgrade画面">
     </div>
-
     <div class="star-growth-copy">
 
         <p>
@@ -623,35 +777,6 @@
           各ノードでは最大5つの星を獲得できます。
           獲得した星は、解放したスキルの強化に使用できます。
         </p>
-
-        <div class="star-levels">
-
-          <div>
-            <b>★</b>
-            <span>1</span>
-          </div>
-
-          <div>
-            <b>★★</b>
-            <span>2</span>
-          </div>
-
-          <div>
-            <b>★★★</b>
-            <span>3</span>
-          </div>
-
-          <div>
-            <b>★★★★</b>
-            <span>4</span>
-          </div>
-
-          <div>
-            <b>★★★★★</b>
-            <span>5</span>
-          </div>
-
-        </div>
 
         <p>
           アクティブスキルは、星を使って強化することができます。
@@ -709,11 +834,8 @@
 
     </div>
 
-    <div class="result-image placeholder-image">
-      <div class="placeholder-screen">
-        <span>IMAGE</span>
-        <small>RESULT SCREEN</small>
-      </div>
+    <div class="howto-image">
+      <img src="assets/mametype-records2.png" alt="MameTypeのrecord画面">
     </div>
 
   </div>
@@ -827,31 +949,17 @@
         タイピングゲームのため、ゲーム画面の描画性能だけでなく、
         キー入力の低遅延も重要です。
       </p>
-    </div>
-
-    <!-- Browser / Input -->
-
-    <div class="environment-basics reveal">
-
-      <div class="env-card">
-        <span class="env-label">BROWSER</span>
-        <h3>最新版のブラウザ</h3>
-        <p>
-          Google Chrome / Microsoft Edge / Safari / Firefox
-          など、ES ModulesとService Workerに対応した
-          最新版のブラウザを推奨します。
-        </p>
-      </div>
-
-      <div class="env-card">
-        <span class="env-label">INPUT</span>
-        <h3>物理キーボードを推奨</h3>
-        <p>
-          ローマ字入力を使用するため、PCなどの物理キーボードが
-          必須です。IMEはOFFにすることを推奨します。
-        </p>
-      </div>
-
+      <ul class="environment-requirements">
+        <li>
+          <span>BROWSER</span>
+          Google Chrome / Microsoft Edge / Safari / Firefox など、
+          ES ModulesとService Workerに対応した最新版
+        </li>
+        <li>
+          <span>KEYBOARD</span>
+          ローマ字入力のため、PCなどの物理キーボードが必須。
+        </li>
+      </ul>
     </div>
 
 
@@ -929,7 +1037,7 @@
 
       <!-- Recommended -->
 
-      <div class="spec-block spec-block-recommended">
+      <div class="spec-block">
 
         <div class="spec-block-heading">
           <span class="spec-level">RECOMMENDED</span>
@@ -950,16 +1058,12 @@
 
           <div class="spec-row">
             <span>CPU</span>
-            <strong>4コア以上</strong>
-            <span class="spec-sub">
-              Core i3 / Ryzen 3 / Apple M1以降など
-            </span>
+            <strong>4コア以上<br><small>Core i3 / Ryzen 3 / Apple M1以降など</small></strong>
           </div>
 
           <div class="spec-row">
             <span>メモリ</span>
-            <strong>4GB以上</strong>
-            <span class="spec-sub">8GB推奨</span>
+            <strong>4GB以上<br><small>8GB推奨</small></strong>
           </div>
 
           <div class="spec-row">
@@ -973,10 +1077,7 @@
 
           <div class="spec-row">
             <span>画面</span>
-            <strong>フルHD（1920×1080）推奨</strong>
-            <span class="spec-sub">
-              4Kなどの高解像度では描画負荷が高くなります。
-            </span>
+              <strong>フルHD（1920×1080）推奨<br><small>4Kなどの高解像度では描画負荷が高くなります。</small></strong>
           </div>
 
           <div class="spec-row">
@@ -986,10 +1087,7 @@
 
           <div class="spec-row">
             <span>入力</span>
-            <strong>物理キーボード必須</strong>
-            <span class="spec-sub">
-              ローマ字入力 / IME OFF推奨
-            </span>
+            <strong>物理キーボード必須<br><small>ローマ字入力</small></strong>
           </div>
 
         </div>
@@ -1032,24 +1130,6 @@
     </div>
 
 
-    <!-- Typing note -->
-
-    <div class="environment-typing reveal">
-
-      <div>
-        <span class="env-label">TYPING PERFORMANCE</span>
-        <h3>タイピングは、入力遅延の少ない環境で。</h3>
-      </div>
-
-      <p>
-        MameTypeではキー入力のタイミングがゲームプレイに直接影響します。
-        Bluetoothキーボードなどでは環境によって入力遅延が発生する場合があるため、
-        より正確なタイピングを目指す場合は有線キーボードなど、
-        入力遅延の少ない環境をおすすめします。
-      </p>
-
-    </div>
-
   </div>
 </section>
 
@@ -1061,7 +1141,7 @@
         <h2>MameTypeの開発を<br><em>応援する。</em></h2>
         <p>
           MameTypeは個人で開発・運営しています。<br>
-          楽しんでいただけたら、GitHub Sponsorsから開発を応援していただけます。
+          楽しんでいただけたら、GitHub Sponsorsから開発を応援してもらえるとうれしいです。
         </p>
         <a class="button button-primary" href="https://github.com/sponsors/mameeeeekko" target="_blank" rel="noopener">
           GitHub Sponsors <span>→</span>
@@ -1118,6 +1198,21 @@
     </div>
     <p>© MameType</p>
   </footer>
+
+  <!-- =====================================================
+       MODE DETAIL MODAL
+       ===================================================== -->
+
+  <div class="mode-modal" aria-hidden="true">
+    <div class="mode-modal-backdrop" data-modal-close></div>
+    <div class="mode-modal-panel" role="dialog" aria-modal="true" aria-labelledby="mode-modal-title">
+      <button class="mode-modal-close" type="button" data-modal-close aria-label="閉じる">×</button>
+      <img class="mode-modal-bg" src="" alt="" aria-hidden="true">
+      <p class="feature-label" id="mode-modal-label"></p>
+      <h4 id="mode-modal-title"></h4>
+      <div class="mode-modal-body"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

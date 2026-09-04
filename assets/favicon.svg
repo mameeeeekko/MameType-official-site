@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- MameType favicon: brand-mark (bordered square + M) with accent caret -->
+  <rect width="64" height="64" fill="#08111f"/>
+  <rect x="5.5" y="5.5" width="53" height="53" fill="none" stroke="#ffffff" stroke-opacity=".9" stroke-width="3"/>
+  <path d="M18 45 V21 h6 l8 12 8-12 h6 v24 h-6 V31.5 L34.5 39 h-5 L24 31.5 V45 Z" fill="#ffffff"/>
+  <rect x="18" y="50" width="28" height="5" fill="#27c5d9"/>
+</svg>
