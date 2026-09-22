@@ -761,6 +761,18 @@ button { font: inherit; }
 }
 
 
+/* Safari storage note */
+
+.install-note {
+  margin: 26px 0 0;
+  padding: 14px 20px;
+  border-left: 2px solid var(--accent);
+  color: #7f8c9b;
+  font-size: 11px;
+  line-height: 1.85;
+}
+
+
 /* =====================================================
    ENVIRONMENT
    ===================================================== */
