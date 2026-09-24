@@ -2875,3 +2875,265 @@ button { font: inherit; }
     gap: 14px;
   }
 }
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
+
+.contact-section {
+  padding-bottom: 120px;
+}
+
+.contact-copy {
+  max-width: 760px;
+  margin-top: 55px;
+}
+
+.contact-copy .lead {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.contact-note {
+  margin: 0 0 34px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+
+/* -----------------------------------------------------
+   CONTACT FORM
+   ----------------------------------------------------- */
+
+.contact-form {
+  display: grid;
+  gap: 30px;
+  padding: 44px;
+  border: 1px solid var(--line);
+  background: #f5f7f8;
+}
+
+.contact-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #8a949f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.contact-label em {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 7px;
+  border: 1px solid rgba(39,197,217,.45);
+  color: #1a97a8;
+  font-size: 8px;
+  font-style: normal;
+  letter-spacing: .12em;
+}
+
+.contact-input,
+.contact-select,
+.contact-textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 15px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.75;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: #a9b2ba;
+}
+
+.contact-input:focus,
+.contact-select:focus,
+.contact-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(39,197,217,.16);
+}
+
+.contact-select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 42px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #8a949f 50%),
+    linear-gradient(135deg, #8a949f 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(50% - 2px),
+    calc(100% - 15px) calc(50% - 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.contact-textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+
+/* Inquiry type radio */
+
+.contact-radio-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.contact-radio {
+  position: relative;
+  cursor: pointer;
+}
+
+.contact-radio input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-radio span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-align: center;
+  transition: border-color .2s, background .2s, color .2s;
+}
+
+.contact-radio:hover span {
+  border-color: #c8d0d7;
+}
+
+.contact-radio input:checked + span {
+  border-color: var(--accent);
+  background: #eefbfd;
+  color: #0e8291;
+}
+
+.contact-radio input:focus-visible + span {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(39,197,217,.16);
+}
+
+
+/* Bug report only */
+
+.contact-bug-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.contact-bug-fields.is-hidden {
+  display: none;
+}
+
+
+/* Actions & status */
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-actions .button {
+  min-width: 230px;
+}
+
+.contact-form .button[disabled] {
+  opacity: .55;
+  transform: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+.contact-status {
+  display: none;
+  margin: 0;
+  padding: 14px 18px;
+  border-left: 2px solid var(--accent);
+  background: rgba(39,197,217,.08);
+  color: #0e8291;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.contact-status.is-visible {
+  display: block;
+}
+
+.contact-status.is-sending {
+  border-left-color: #aab2bb;
+  background: #eef0f2;
+  color: var(--muted);
+}
+
+.contact-status.is-error {
+  border-left-color: #d9534f;
+  background: #fdf1f0;
+  color: #a5403c;
+}
+
+
+/* =====================================================
+   CONTACT — TABLET / MOBILE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+  .contact-copy {
+    margin-top: 40px;
+  }
+
+  .contact-form {
+    padding: 30px 24px;
+  }
+
+  .contact-bug-fields {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .contact-form {
+    gap: 26px;
+    padding: 24px 18px;
+  }
+
+  .contact-radio-group {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-radio span {
+    min-height: 48px;
+  }
+
+  .contact-actions .button {
+    width: 100%;
+    min-width: 0;
+  }
+
+}

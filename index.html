@@ -28,6 +28,7 @@
       <a href="#howto">HOW TO PLAY</a>
       <a href="#start">HOW TO START</a>
       <a href="#support">SUPPORT</a>
+      <a href="#contact">CONTACT</a>
       <a class="nav-play" href="https://mameeeeekko.github.io/MameType/" target="_blank" rel="noopener">PLAY</a>
     </nav>
   </header>
@@ -1185,18 +1186,94 @@
           <small>ソースコード・開発情報</small>
           <b>↗</b>
         </a>
-        <a class="link-card reveal" href="mailto:mamelog0103@gmail.com?subject=MameType%20不具合報告" target="_blank" rel="noopener">
-          <span class="link-type">CONTACT</span>
-          <strong>不具合報告</strong>
-          <small>動作不良・誤記・修正のご連絡</small>
-          <b>↗</b>
-        </a>
-        <a class="link-card reveal" href="mailto:mamelog0103@gmail.com?subject=MameType%20ご要望・その他" target="_blank" rel="noopener">
-          <span class="link-type">CONTACT</span>
-          <strong>ご要望・その他</strong>
-          <small>機能要望・質問・フィードバック</small>
-          <b>↗</b>
-        </a>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+
+    <section class="contact-section section" id="contact">
+      <div class="section-number">08</div>
+
+      <div class="section-heading reveal">
+        <p class="eyebrow">CONTACT</p>
+        <h2>MameTypeへの<br>お問い合わせ</h2>
+      </div>
+
+      <div class="contact-copy reveal">
+        <p class="lead">
+          不具合のご報告、ご意見・ご要望は、下記のフォームからお送りください。
+        </p>
+        <p class="contact-note">
+          返信をご希望の場合は、メールアドレスをご記入ください。
+        </p>
+
+        <form class="contact-form" id="contact-form">
+
+          <div class="contact-field">
+            <p class="contact-label">お問い合わせ種類 <em>必須</em></p>
+            <div class="contact-radio-group">
+              <label class="contact-radio">
+                <input type="radio" name="inquiry_type" value="バグ報告" required>
+                <span>バグ報告</span>
+              </label>
+              <label class="contact-radio">
+                <input type="radio" name="inquiry_type" value="ご意見・ご要望">
+                <span>ご意見・ご要望</span>
+              </label>
+              <label class="contact-radio">
+                <input type="radio" name="inquiry_type" value="その他">
+                <span>その他</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="contact-field">
+            <label class="contact-label" for="contact-email">メールアドレス <em>必須</em></label>
+            <input class="contact-input" type="email" id="contact-email" name="email" required
+              placeholder="返信先のメールアドレス" autocomplete="email">
+          </div>
+
+          <div class="contact-bug-fields is-hidden" data-bug-only>
+            <div class="contact-field">
+              <label class="contact-label" for="contact-os">使用OS <em>必須</em></label>
+              <select class="contact-select" id="contact-os" name="os">
+                <option value="">選択してください</option>
+                <option value="Windows">Windows</option>
+                <option value="macOS">macOS</option>
+                <option value="Android">Android</option>
+                <option value="Linux">Linux</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+
+            <div class="contact-field">
+              <label class="contact-label" for="contact-browser">使用ブラウザ <em>必須</em></label>
+              <select class="contact-select" id="contact-browser" name="browser">
+                <option value="">選択してください</option>
+                <option value="Chrome">Chrome</option>
+                <option value="Safari">Safari</option>
+                <option value="Edge">Edge</option>
+                <option value="Firefox">Firefox</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="contact-field">
+            <label class="contact-label" for="contact-message">お問い合わせ内容 <em>必須</em></label>
+            <textarea class="contact-textarea" id="contact-message" name="message" rows="8" required
+              placeholder="起きたこと、再現方法、期待している動作などをご記入ください。"></textarea>
+          </div>
+
+          <div class="contact-actions">
+            <button class="button button-primary" type="submit">送信する <span>→</span></button>
+          </div>
+
+          <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
+
+        </form>
       </div>
     </section>
   </main>
@@ -1212,8 +1289,6 @@
       <a href="#start">HOW TO START</a>
       <a href="https://x.com/mamelog0103" target="_blank" rel="noopener">X</a>
       <a href="https://note.com/mamelog0103" target="_blank" rel="noopener">NOTE</a>
-       <a href="mailto:mamelog0103@gmail.com?subject=MameType%20不具合報告">CONTACT</a>
-       <a href="mailto:mamelog0103@gmail.com?subject=MameType%20ご要望・その他">CONTACT</a>
     </div>
     <p>© MameType</p>
   </footer>
@@ -1244,6 +1319,10 @@
 
   gtag('config', 'G-LTCTSF3D03');
 </script>
+
+  <!-- Contact form (Formspree AJAX) -->
+  <script src="contact-form.js" defer></script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 
 </body>
